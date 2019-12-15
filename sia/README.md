@@ -12,3 +12,16 @@ Then start a shell from within the container and do anything you like:
 
     docker exec -ti siad bash
     $ siac wallet
+
+Here is a simple `docker-compose.yml` for Sia:
+
+    version: '3'
+    services:
+      siad:
+        image: markusk/sia
+        restart: always
+        ports:
+          - "9981:9981"
+          - "9982:9982"
+        volumes:
+          - "./data:/sia"
