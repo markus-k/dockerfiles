@@ -1,6 +1,6 @@
-FROM debian
+FROM debian:bullseye
 
-ARG SIA_VERSION=1.5.0
+ARG SIA_VERSION=1.5.7
 
 RUN apt-get update && \
     apt-get install -y wget unzip gpg && \
